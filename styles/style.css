@@ -1,5 +1,6 @@
 .page {
   background-color: var(--bg-color);
+  background-attachment: fixed;
 }
 
 .rec-decor {
