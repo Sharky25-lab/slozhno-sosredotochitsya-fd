@@ -113,7 +113,7 @@
 .header__theme-menu-button {
   font-family: "IBM Plex Mono", sans-serif;
   border: 1px solid transparent;
-  padding: 2px 13px;
+  padding: 2px 13px 4px;
   color: var(--theme-color);
   font-size: 18px;
   font-weight: 400;
@@ -258,7 +258,7 @@ h2.cards__title {
     margin-inline-start: -20px;
   }
   .cards {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.04fr;
   }
   .block-split {
     grid-template-columns: 1fr;
