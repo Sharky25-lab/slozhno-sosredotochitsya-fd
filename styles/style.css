@@ -1,11 +1,14 @@
 .page {
   background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
 .rec-decor {
   display: inline-block;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   position: absolute;
   color: var(--accent-color);
   font-size: 18px;
@@ -55,7 +58,7 @@
 }
 
 .title-decor {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
@@ -67,15 +70,11 @@
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100vh;
   min-block-size: 668px;
-  margin-block-end: 40px;
   padding: 0 10px;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
 }
 
 .page__title {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
@@ -105,7 +104,7 @@
 }
 
 .header__theme-menu-button {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   border: 1px solid transparent;
   padding: 2px 13px 4px;
   color: var(--theme-color);
@@ -118,7 +117,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--theme-color);
+  border-color: color-mix(in srgb, var(--theme-color), transparent 70%);
 }
 
 .header__theme-menu-button:focus {
@@ -126,7 +125,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--theme-color);
+  outline: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
@@ -140,7 +139,9 @@
   flex-direction: column;
   padding: 0 10px;
   gap: 50px;
-  margin-block-end: 40px;
+  padding-block-start: 40px;
+  padding-block-end: 40px;
+  background-color: var(--bg-color);
 }
 
 .cards {
@@ -149,7 +150,7 @@
 }
 
 .cards__title {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   line-height: 23.4px;
   font-weight: 700;
@@ -180,7 +181,7 @@ h2.cards__title {
 }
 
 .cards__text {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   line-height: 23.4px;
   color: var(--text-color);
@@ -193,7 +194,7 @@ h2.cards__title {
 }
 
 .link:hover {
-  outline: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--text-color);
 }
 
 .link:focus {
@@ -201,8 +202,7 @@ h2.cards__title {
 }
 
 .link:focus-visible {
-  outline: 1px solid var(--text-color);
-  outline-offset: 1px;
+  border-block-end: 1px solid currentColor;
 }
 
 .gallery {
@@ -229,6 +229,7 @@ h2.cards__title {
   min-block-size: 668px;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-color);
 }
 
 .footer .page__title {
@@ -240,12 +241,12 @@ h2.cards__title {
 @media (width >= 768px) {
   .header {
     padding: 0 20px;
-    margin-block-end: 60px;
   }
   .main {
     padding: 0 20px;
     gap: 80px;
-    margin-block-end: 60px;
+    padding-block-start: 60px;
+    padding-block-end: 60px;
   }
   .page__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
