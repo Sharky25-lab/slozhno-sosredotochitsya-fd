@@ -88,7 +88,7 @@
   max-inline-size: 100%;
   justify-self: end;
   align-self: center;
-  margin-block-start: -1em;
+  margin-block-end: 1em;
 }
 
 .header__theme-menu {
@@ -125,7 +125,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
@@ -141,7 +141,6 @@
   gap: 50px;
   padding-block-start: 40px;
   padding-block-end: 40px;
-  background-color: var(--bg-color);
 }
 
 .cards {
@@ -202,7 +201,7 @@ h2.cards__title {
 }
 
 .link:focus-visible {
-  border-block-end: 1px solid currentColor;
+  outline: 1px solid currentColor;
 }
 
 .gallery {
@@ -229,7 +228,6 @@ h2.cards__title {
   min-block-size: 668px;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-color);
 }
 
 .footer .page__title {
